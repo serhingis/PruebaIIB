@@ -1,0 +1,71 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "DBAListados",
+    "version" : "1.0.0",
+    "description" : "DBAListados"
+  },
+  "paths" : {
+    "/obtenerPeticiones" : {
+      "get" : {
+        "operationId" : "getDBA6118P",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve DBA6118P",
+        "parameters" : [ {
+          "name" : "sucursal",
+          "in" : "query",
+          "type" : "string"
+        }, {
+          "name" : "tipo",
+          "in" : "query",
+          "type" : "string"
+        }, {
+          "name" : "empresa",
+          "in" : "query",
+          "type" : "string"
+        } ]
+      }
+    },
+    "/cambiarEstadoPeticion" : {
+      "get" : {
+        "operationId" : "getCambiarEstadoPeticion",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve cambiarEstadoPeticion",
+        "parameters" : [ {
+          "name" : "tipo",
+          "in" : "query",
+          "type" : "boolean"
+        }, {
+          "name" : "numero",
+          "in" : "query",
+          "type" : "string"
+        }, {
+          "name" : "empresa",
+          "in" : "query",
+          "type" : "string"
+        }, {
+          "name" : "sucursal",
+          "in" : "header",
+          "type" : "string"
+        } ]
+      }
+    }
+  },
+  "basePath" : "/quomrest/dbalistados"
+}
